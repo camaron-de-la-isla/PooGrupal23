@@ -1,3 +1,8 @@
+package pedido;
+
+import cliente.Cliente;
+import producto.Producto;
+
 public class Venta {
     private
     int id;
@@ -79,7 +84,7 @@ public class Venta {
 
     @Override
     public String toString() {
-        return "Venta [cantidad=" + cantidad + ", cliente=" + cliente + ", fecha=" + fecha + ", id=" + id + ", producto="
+        return "Pedidos.Venta [cantidad=" + cantidad + ", cliente=" + cliente + ", fecha=" + fecha + ", id=" + id + ", producto="
                 + producto + ", precioTotal=" + precioTotal + "]";
     }
 }

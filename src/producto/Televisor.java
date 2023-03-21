@@ -1,33 +1,40 @@
-public class Altavoz extends Producto{
+package producto;
+
+public class Televisor extends Producto {
     private
-    int potencia;
+    int pulgadas;
     String marca;
     String modelo;
     String color;
-    public Altavoz(int id, String nombre, double precio, int stock, int potencia, String marca, String modelo, String color) {
+    double precio;
+
+    public Televisor(int id, String nombre, double precio, int stock, int pulgadas, String marca, String modelo, String color) {
         this.setId(id);
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
-        this.potencia = potencia;
+        this.pulgadas = pulgadas;
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
         this.precio = precio;
     }
 
-    public Altavoz() {
+    public Televisor() {
+        this.setId(0);
         this.nombre = "";
         this.precio = 0.0;
         this.stock = 0;
-        this.potencia = 0;
+        this.pulgadas = 0;
         this.marca = "";
         this.modelo = "";
         this.color = "";
+        this.precio = 0.0;
+
     }
 
-    public int getPotencia() {
-        return potencia;
+    public int getPulgadas() {
+        return pulgadas;
     }
 
     public String getMarca() {
@@ -46,14 +53,8 @@ public class Altavoz extends Producto{
         return precio;
     }
 
-    public String getNombre() {return nombre; }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setPotencia(int potencia) {
-        this.potencia = potencia;
+    public void setPulgadas(int pulgadas) {
+        this.pulgadas = pulgadas;
     }
 
     public void setMarca(String marca) {
@@ -72,9 +73,10 @@ public class Altavoz extends Producto{
         this.precio = precio;
     }
 
+
     @Override
     public String toString() {
-        return "Altavoz [color=" + color + ", marca=" + marca + ", modelo=" + modelo + ", potencia=" + potencia + ", precio="
-                + precio + "]";
+        return "Productos.Televisor [color=" + color + ", marca=" + marca + ", modelo=" + modelo + ", precio=" + precio
+                + ", pulgadas=" + pulgadas + "]";
     }
 }

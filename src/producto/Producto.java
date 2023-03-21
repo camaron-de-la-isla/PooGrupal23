@@ -1,3 +1,5 @@
+package producto;
+
 public class Producto {
     private
     int id;
@@ -51,7 +53,7 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto [id=" + id + ", nombre=" + nombre + ", precio=" + precio + "]";
+        return "Productos.Producto [id=" + id + ", nombre=" + nombre + ", precio=" + precio + "]";
     }
 
 }

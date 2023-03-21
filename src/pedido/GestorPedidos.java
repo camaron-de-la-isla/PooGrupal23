@@ -1,3 +1,9 @@
+package pedido;
+
+import cliente.Cliente;
+import producto.GestorProductos;
+import producto.Producto;
+
 import java.util.ArrayList;
 
 public class GestorPedidos {
@@ -49,7 +55,7 @@ public class GestorPedidos {
         }
     }
 
-    public void hacerPedido(int id, String fecha,Cliente cliente, Producto producto, int cantidad, double precioTotal) {
+    public void hacerPedido(int id, String fecha, Cliente cliente, Producto producto, int cantidad, double precioTotal) {
         Venta pedido = new Venta(id, fecha, cliente, producto, cantidad, precioTotal);
         pedidoList.add(pedido);
     }

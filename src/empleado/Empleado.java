@@ -1,4 +1,6 @@
-public class Cliente {
+package empleado;
+
+public class Empleado {
     private
     String nombre;
     String apellidos;
@@ -6,29 +8,35 @@ public class Cliente {
     String direccion;
     String telefono;
     String email;
-    String usuario;
+    String puesto;
+    double salario;
     String contraseña;
+    boolean privilegios;
 
-    public Cliente(String nombre, String apellidos, String dni, String direccion, String telefono, String email, String usuario, String contraseña) {
+    public Empleado(String nombre, String apellidos, String dni, String direccion, String telefono, String email, String puesto, double salario, String contraseña, boolean privilegios) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.dni = dni;
         this.direccion = direccion;
         this.telefono = telefono;
         this.email = email;
-        this.usuario = usuario;
+        this.puesto = puesto;
+        this.salario = salario;
         this.contraseña = contraseña;
+        privilegios = false;
     }
 
-    public Cliente() {
+    public Empleado() {
         this.nombre = "";
         this.apellidos = "";
         this.dni = "";
         this.direccion = "";
         this.telefono = "";
         this.email = "";
-        this.usuario = "";
+        this.puesto = "";
+        this.salario = 0.0;
         this.contraseña = "";
+        privilegios = false;
     }
 
     public String getNombre() {
@@ -55,6 +63,14 @@ public class Cliente {
         return email;
     }
 
+    public String getPuesto() {
+        return puesto;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -79,27 +95,33 @@ public class Cliente {
         this.email = email;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public void setPuesto(String puesto) {
+        this.puesto = puesto;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
     }
 
     public String getContraseña() {
         return contraseña;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
 
+    public boolean getPrivilegios() {
+        return privilegios;
+    }
 
+    public void setPrivilegios(boolean privilegios) {
+        this.privilegios = privilegios;
+    }
 
     @Override
     public String toString() {
-        return "Cliente [nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + ", direccion=" + direccion
-                + ", telefono=" + telefono + ", email=" + email + "usuario=" + usuario + "]";
+        return "Empleado.Empleado [apellidos=" + apellidos + ", direccion=" + direccion + ", dni=" + dni + ", email=" + email
+                + ", nombre=" + nombre + ", puesto=" + puesto + ", salario=" + salario + ", telefono=" + telefono + "privilegios=" + privilegios +"]";
     }
 }

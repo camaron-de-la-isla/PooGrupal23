@@ -1,3 +1,5 @@
+package producto;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -51,7 +53,7 @@ public class GestorProductos {
         Altavoz jblflip4 = new Altavoz(gestorId.assignId(), "JBL Flip4", 120, 8, 2800, "JBL", "Flip 4", "Negro");
         Altavoz miSpeaker = new Altavoz(gestorId.assignId(),"Mi Speaker", 50, 8, 1000, "Xiaomi", "Mi Speaker", "Blanco");
         Ordenador portatil = new Ordenador(gestorId.assignId(), "Portatil", 1000, 10, 8, 512, "Windows", "Asus", "Portatil", "Gris");
-        Ordenador sobremesa = new Ordenador(gestorId.assignId(), "Ordenador de sobremesa", 1500, 10, 16, 1024, "Windows", "Asus", "Sobremesa", "Negro");
+        Ordenador sobremesa = new Ordenador(gestorId.assignId(), "Productos.Ordenador de sobremesa", 1500, 10, 16, 1024, "Windows", "Asus", "Sobremesa", "Negro");
         Televisor miTv = new Televisor(gestorId.assignId(), "miTv", 580, 12, 52, "Xiaomi", "miTv", "Blanco");
         Televisor sony = new Televisor(gestorId.assignId(), "Sony", 1000, 12, 65, "Sony", "Sony", "Negro");
         self.addProducto(galaxyS10);

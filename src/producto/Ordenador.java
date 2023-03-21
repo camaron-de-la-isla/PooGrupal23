@@ -1,4 +1,6 @@
-public class Ordenador extends Producto{
+package producto;
+
+public class Ordenador extends Producto {
     private
     int ram;
     int almacenamiento;
@@ -84,7 +86,7 @@ public class Ordenador extends Producto{
 
     @Override
     public String toString() {
-        return "Ordenador [almacenamiento=" + almacenamiento + ", color=" + color + ", marca=" + marca + ", modelo="
+        return "Productos.Ordenador [almacenamiento=" + almacenamiento + ", color=" + color + ", marca=" + marca + ", modelo="
                 + modelo + ", ram=" + ram + ", sistemaOperativo=" + sistemaOperativo + "]";
     }
 }

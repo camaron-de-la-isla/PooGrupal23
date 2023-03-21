@@ -1,3 +1,8 @@
+package empleado;
+
+import cliente.Cliente;
+import producto.*;
+
 import java.util.Scanner;
 
 public class InterfazEmpleado {
@@ -69,7 +74,7 @@ public class InterfazEmpleado {
                                 String contraseñaNuevo = sc.nextLine();
                                 Cliente clienteNuevo = new Cliente(nombreNuevo, apellidosNuevo, dniNuevo, direccionNuevo, telefonoNuevo, emailNuevo, usuarioNuevo, contraseñaNuevo);
                                 gestorClientes.addCliente(clienteNuevo);
-                                System.out.println("Cliente añadido correctamente\n\n\n");
+                                System.out.println("Cliente.Cliente añadido correctamente\n\n\n");
                                 break;
                             case 2:
                                 System.out.println("Eliminar cliente");
@@ -82,7 +87,7 @@ public class InterfazEmpleado {
                                 } else if (gestorClientes.existeUsuario(userEliminar) == true) {
                                     Cliente clienteEliminar = gestorClientes.obtenerCliente(userEliminar);
                                     gestorClientes.removeCliente(clienteEliminar);
-                                    System.out.println("Cliente eliminado correctamente\n\n\n");
+                                    System.out.println("Cliente.Cliente eliminado correctamente\n\n\n");
 
                                 }
                                 bool2 = false;
@@ -126,7 +131,7 @@ public class InterfazEmpleado {
                                     Cliente cliente = new Cliente(nombre, apellidos, dni, direccion, telefono, email, usuario, contraseña);
                                     gestorClientes.removeCliente(clienteModificar);
                                     gestorClientes.addCliente(cliente);
-                                    System.out.println("Cliente modificado correctamente\n\n\n");
+                                    System.out.println("Cliente.Cliente modificado correctamente\n\n\n");
                                 } else {
                                     System.out.println("Operación cancelada\n\n\n");
                                 }
@@ -195,7 +200,7 @@ public class InterfazEmpleado {
                                     }
                                     Empleado empleadoNuevo = new Empleado(nombreNuevo2, apellidosNuevo2, dniNuevo2, direccionNuevo2, telefonoNuevo2, emailNuevo2, puestoNuevo2, salarioNuevo2, contraseñaNuevo2, privilegiosNuevoBoolean);
                                     gestorEmpleados.addEmpleado(empleadoNuevo);
-                                    System.out.println("Empleado añadido correctamente\n\n\n");
+                                    System.out.println("Empleado.Empleado añadido correctamente\n\n\n");
                                     break;
                                 case 2:
                                     System.out.println("Eliminar empleado");
@@ -205,7 +210,7 @@ public class InterfazEmpleado {
                                     String dniEliminar = sc.nextLine();
                                     Empleado empleadoEliminar = gestorEmpleados.buscarEmpleado(dniEliminar);
                                     gestorEmpleados.removeEmpleado(empleadoEliminar);
-                                    System.out.println("Empleado eliminado correctamente\n\n\n");
+                                    System.out.println("Empleado.Empleado eliminado correctamente\n\n\n");
                                     break;
                                 case 3:
                                     System.out.println("Modificar empleado");
@@ -252,7 +257,7 @@ public class InterfazEmpleado {
                                         Empleado empleado2 = new Empleado(nombre, apellidos, dni, direccion, telefono, email, puesto, salario, contraseña, privilegiosBoolean);
                                         gestorEmpleados.removeEmpleado(empleadoModificar);
                                         gestorEmpleados.addEmpleado(empleado2);
-                                        System.out.println("Empleado modificado correctamente\n\n\n");
+                                        System.out.println("Empleado.Empleado modificado correctamente\n\n\n");
                                     } else {
                                         System.out.println("Operación cancelada\n\n\n");
                                     }
@@ -299,10 +304,10 @@ public class InterfazEmpleado {
                                 System.out.println("===============");
                                 System.out.println("\n\n\n");
                                 System.out.println("Que tipo de producto quieres añadir? ");
-                                System.out.println("1. Altavoz");
-                                System.out.println("2. Ordenador");
-                                System.out.println("3. Smartphone");
-                                System.out.println("4. Televisor");
+                                System.out.println("1. Productos.Altavoz");
+                                System.out.println("2. Productos.Ordenador");
+                                System.out.println("3. Productos.Smartphone");
+                                System.out.println("4. Productos.Televisor");
                                 System.out.println("Elige una opción: ");
                                 int opcion31 = sc.nextInt();
                                 boolean bool5 = true;
@@ -328,7 +333,7 @@ public class InterfazEmpleado {
                                             String colorAltavoz = sc.nextLine();
                                             Altavoz altavoz = new Altavoz(gestorId.assignId(), nombreAltavoz, precioAltavoz, stockAltavoz, potenciaAltavoz, marcaAltavoz, modeloAltavoz, colorAltavoz);
                                             gestorProductos.addProducto(altavoz);
-                                            System.out.println("Altavoz añadido correctamente\n\n\n");
+                                            System.out.println("Productos.Altavoz añadido correctamente\n\n\n");
                                             break;
                                         case 2:
                                             System.out.println("Añadir ordenador");
@@ -355,7 +360,7 @@ public class InterfazEmpleado {
                                             String colorOrdenador = sc.nextLine();
                                             Ordenador ordenador = new Ordenador(gestorId.assignId(), nombreOrdenador, precioOrdenador, stockOrdenador, ramOrdenador, almacenamientoOrdenador, sistemasOperativosOrdenador, marcaOrdenador, modeloOrdenador, colorOrdenador);
                                             gestorProductos.addProducto(ordenador);
-                                            System.out.println("Ordenador añadido correctamente\n\n\n");
+                                            System.out.println("Productos.Ordenador añadido correctamente\n\n\n");
                                             break;
 
                                         case 3:
@@ -382,7 +387,7 @@ public class InterfazEmpleado {
                                             String colorSmartphone = sc.nextLine();
                                             Smartphone smartphone = new Smartphone(gestorId.assignId(), nombreSmartphone, precioSmartphone, stockSmartphone, ramSmartphone, almacenamientoSmartphone, sistemaOperativoSmarthpone, marcaSmartphone, modeloSmartphone, colorSmartphone);
                                             gestorProductos.addProducto(smartphone);
-                                            System.out.println("Smartphone añadido correctamente\n\n\n");
+                                            System.out.println("Productos.Smartphone añadido correctamente\n\n\n");
                                             break;
 
                                         case 4:
@@ -405,7 +410,7 @@ public class InterfazEmpleado {
                                             String colorTelevisor = sc.nextLine();
                                             Televisor televisor = new Televisor(gestorId.assignId(), nombreTelevisor, precioTelevisor, stockTelevisor, pulgadasTelevisor, marcaTelevisor, modeloTelevisor, colorTelevisor);
                                             gestorProductos.addProducto(televisor);
-                                            System.out.println("Televisor añadido correctamente\n\n\n");
+                                            System.out.println("Productos.Televisor añadido correctamente\n\n\n");
                                             break;
 
 
@@ -421,10 +426,10 @@ public class InterfazEmpleado {
                                 System.out.println("=================");
                                 System.out.println("\n\n\n");
                                 System.out.println("Que tipo de producto quieres eliminar? ");
-                                System.out.println("1. Altavoz");
-                                System.out.println("2. Ordenador");
-                                System.out.println("3. Smartphone");
-                                System.out.println("4. Televisor");
+                                System.out.println("1. Productos.Altavoz");
+                                System.out.println("2. Productos.Ordenador");
+                                System.out.println("3. Productos.Smartphone");
+                                System.out.println("4. Productos.Televisor");
                                 System.out.println("Elige una opción: ");
                                 int opcion32 = sc.nextInt();
 
@@ -447,7 +452,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getId() == idAltavozEliminar) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Altavoz eliminado correctamente");
+                                                        System.out.println("Productos.Altavoz eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el altavoz");
@@ -458,7 +463,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getNombre().equals(nombreAltavozEliminar)) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Altavoz eliminado correctamente");
+                                                        System.out.println("Productos.Altavoz eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el altavoz");
@@ -469,7 +474,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getNombre().equals(nombreAltavozEliminar) && gestorProductos.obtenerProductos().get(i).getId() == idAltavozEliminar) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Altavoz eliminado correctamente");
+                                                        System.out.println("Productos.Altavoz eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el altavoz");
@@ -495,7 +500,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getId() == idEliminar) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Ordenador eliminado correctamente");
+                                                        System.out.println("Productos.Ordenador eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el ordenador");
@@ -506,7 +511,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getNombre().equals(nombreEliminar)) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Ordenador eliminado correctamente");
+                                                        System.out.println("Productos.Ordenador eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el ordenador");
@@ -517,7 +522,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getNombre().equals(nombreEliminar) && gestorProductos.obtenerProductos().get(i).getId() == idEliminar) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Ordenador eliminado correctamente");
+                                                        System.out.println("Productos.Ordenador eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el ordenador");
@@ -545,7 +550,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getId() == idEliminar2) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Smartphone eliminado correctamente");
+                                                        System.out.println("Productos.Smartphone eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el smartphone");
@@ -556,7 +561,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getNombre().equals(nombreEliminar2)) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Smartphone eliminado correctamente");
+                                                        System.out.println("Productos.Smartphone eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el smartphone");
@@ -567,7 +572,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getNombre().equals(nombreEliminar2) && gestorProductos.obtenerProductos().get(i).getId() == idEliminar2) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Smartphone eliminado correctamente");
+                                                        System.out.println("Productos.Smartphone eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el smartphone");
@@ -594,7 +599,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getId() == idEliminar3) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Televisor eliminado correctamente");
+                                                        System.out.println("Productos.Televisor eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el televisor");
@@ -605,7 +610,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getNombre().equals(nombreEliminar3)) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Televisor eliminado correctamente");
+                                                        System.out.println("Productos.Televisor eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el televisor");
@@ -616,7 +621,7 @@ public class InterfazEmpleado {
                                                 for (int i = 0; i < gestorProductos.obtenerProductos().size(); i++) {
                                                     if (gestorProductos.obtenerProductos().get(i).getNombre().equals(nombreEliminar3) && gestorProductos.obtenerProductos().get(i).getId() == idEliminar3) {
                                                         gestorProductos.obtenerProductos().remove(i);
-                                                        System.out.println("Televisor eliminado correctamente");
+                                                        System.out.println("Productos.Televisor eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el televisor");
@@ -653,7 +658,7 @@ public class InterfazEmpleado {
                                             System.out.println("Introduce el nuevo nombre: ");
                                             String nuevoNombre = sc.nextLine();
                                             gestorProductos.obtenerProductos().get(i).setNombre(nuevoNombre);
-                                            System.out.println("Producto modificado correctamente");
+                                            System.out.println("Productos.Producto modificado correctamente");
                                             break;
                                         } else {
                                             System.out.println("No se ha encontrado el producto");
@@ -666,7 +671,7 @@ public class InterfazEmpleado {
                                             System.out.println("Introduce el nuevo ID: ");
                                             int nuevoId = sc.nextInt();
                                             gestorProductos.obtenerProductos().get(i).setId(nuevoId);
-                                            System.out.println("Producto modificado correctamente");
+                                            System.out.println("Productos.Producto modificado correctamente");
                                             break;
                                         } else {
                                             System.out.println("No se ha encontrado el producto");
@@ -682,7 +687,7 @@ public class InterfazEmpleado {
                                             System.out.println("Introduce el nuevo ID: ");
                                             int nuevoId = sc.nextInt();
                                             gestorProductos.obtenerProductos().get(i).setId(nuevoId);
-                                            System.out.println("Producto modificado correctamente");
+                                            System.out.println("Productos.Producto modificado correctamente");
                                             break;
                                         } else {
                                             System.out.println("No se ha encontrado el producto");

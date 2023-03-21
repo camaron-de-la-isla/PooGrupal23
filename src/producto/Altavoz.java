@@ -1,38 +1,35 @@
-public class Televisor extends Producto{
+package producto;
+
+public class Altavoz extends Producto {
     private
-    int pulgadas;
+    int potencia;
     String marca;
     String modelo;
     String color;
-    double precio;
-
-    public Televisor(int id, String nombre, double precio, int stock, int pulgadas, String marca, String modelo, String color) {
+    public Altavoz(int id, String nombre, double precio, int stock, int potencia, String marca, String modelo, String color) {
         this.setId(id);
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
-        this.pulgadas = pulgadas;
+        this.potencia = potencia;
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
         this.precio = precio;
     }
 
-    public Televisor() {
-        this.setId(0);
+    public Altavoz() {
         this.nombre = "";
         this.precio = 0.0;
         this.stock = 0;
-        this.pulgadas = 0;
+        this.potencia = 0;
         this.marca = "";
         this.modelo = "";
         this.color = "";
-        this.precio = 0.0;
-
     }
 
-    public int getPulgadas() {
-        return pulgadas;
+    public int getPotencia() {
+        return potencia;
     }
 
     public String getMarca() {
@@ -51,8 +48,14 @@ public class Televisor extends Producto{
         return precio;
     }
 
-    public void setPulgadas(int pulgadas) {
-        this.pulgadas = pulgadas;
+    public String getNombre() {return nombre; }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPotencia(int potencia) {
+        this.potencia = potencia;
     }
 
     public void setMarca(String marca) {
@@ -71,10 +74,9 @@ public class Televisor extends Producto{
         this.precio = precio;
     }
 
-
     @Override
     public String toString() {
-        return "Televisor [color=" + color + ", marca=" + marca + ", modelo=" + modelo + ", precio=" + precio
-                + ", pulgadas=" + pulgadas + "]";
+        return "Productos.Altavoz [color=" + color + ", marca=" + marca + ", modelo=" + modelo + ", potencia=" + potencia + ", precio="
+                + precio + "]";
     }
 }

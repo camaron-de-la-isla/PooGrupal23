@@ -1,3 +1,5 @@
+package producto;
+
 public class Smartphone extends
         Producto {
 
@@ -85,7 +87,7 @@ public class Smartphone extends
 
     @Override
     public String toString() {
-        return "Smartphone [ram=" + ram + ", almacenamiento=" + almacenamiento + ", sistemaOperativo=" + sistemaOperativo + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color + "]";
+        return "Productos.Smartphone [ram=" + ram + ", almacenamiento=" + almacenamiento + ", sistemaOperativo=" + sistemaOperativo + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color + "]";
     }
 
 }

@@ -1,3 +1,5 @@
+package cliente;
+
 import java.util.Scanner;
 
 public class InterfazCliente {
@@ -19,7 +21,7 @@ public class InterfazCliente {
 
         switch(opcion){
             case 1:
-                System.out.println("Productos");
+                System.out.println("producto");
                 System.out.println("1. Ver todos los productos");
                 System.out.println("2. Ver productos por categoria");
                 System.out.println("Introduzca el numero de la opcion que desea: ");
@@ -46,7 +48,7 @@ public class InterfazCliente {
                             case 1:
                                 System.out.println("Altavoces");
                                 for(int i = 0; i < gestorProductos.obtenerProductos().size(); i++){
-                                    if(gestorProductos.obtenerProductos().get(i).getClass().equals("Altavoz")){
+                                    if(gestorProductos.obtenerProductos().get(i).getClass().equals("Productos.Altavoz")){
                                         System.out.println(gestorProductos.obtenerProductos().get(i));
                                     }
                                 }
@@ -54,7 +56,7 @@ public class InterfazCliente {
                             case 2:
                                 System.out.println("Ordenadores");
                                 for(int i = 0; i < gestorProductos.obtenerProductos().size(); i++){
-                                    if(gestorProductos.obtenerProductos().get(i).getClass().equals("Ordenador")){
+                                    if(gestorProductos.obtenerProductos().get(i).getClass().equals("Productos.Ordenador")){
                                         System.out.println(gestorProductos.obtenerProductos().get(i));
                                     }
                                 }
@@ -62,7 +64,7 @@ public class InterfazCliente {
                             case 3:
                                 System.out.println("Smartphones");
                                 for(int i = 0; i < gestorProductos.obtenerProductos().size(); i++){
-                                    if(gestorProductos.obtenerProductos().get(i).getClass().equals("Smartphone")){
+                                    if(gestorProductos.obtenerProductos().get(i).getClass().equals("Productos.Smartphone")){
                                         System.out.println(gestorProductos.obtenerProductos().get(i));
                                     }
                                 }
@@ -70,7 +72,7 @@ public class InterfazCliente {
                             case 4:
                                 System.out.println("Televisores");
                                 for(int i = 0; i < gestorProductos.obtenerProductos().size(); i++){
-                                    if(gestorProductos.obtenerProductos().get(i).getClass().equals("Televisor")){
+                                    if(gestorProductos.obtenerProductos().get(i).getClass().equals("Productos.Televisor")){
                                         System.out.println(gestorProductos.obtenerProductos().get(i));
                                     }
                                 }
@@ -88,7 +90,7 @@ public class InterfazCliente {
 
                 break;
             case 2:
-                System.out.println("Pedidos");
+                System.out.println("pedido");
                 for(int i = 0; i < gestorPedidos.obtenerPedidos().size(); i++){
                     System.out.println(gestorPedidos.obtenerPedidos().get(i));
                 }
